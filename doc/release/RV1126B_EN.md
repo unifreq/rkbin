@@ -1,5 +1,145 @@
 # rv1126b Release Note
 
+## rv1126b_spl{, _ipc}_v1.05.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | :--------------------- | ------------ | --------- |
+| 2025-09-26 | rv1126b_spl{, _ipc}_v1.05.bin | 2f340fbbc13    | important |
+
+### New
+
+1. Adjust tsadc offset and bias according to otp.
+
+------
+
+## rv1126b_bl31_v1.11.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-09-19 | rv1126b_bl31_v1.11.elf | 405ded103 | important |
+
+### New
+
+1. Support ultra-mode for system sleep.
+2. Support use non-ECC mode to read OTP.
+
+------
+
+## rv1126b_spl{, _ipc}_v1.04.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | :--------------------- | ------------ | --------- |
+| 2025-09-11 | rv1126b_spl{, _ipc}_v1.04.bin | 23541e77b13    | important |
+
+| Index | Severity  | Update             | Issue description                                            | Issue source |
+| ----- | --------- | ------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix default bias | Due to the width, some temperatures may overflow. | -            |
+
+------
+
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.06.bin
+
+| Date       | File                                     | Build commit | Severity  |
+| ---------- | :--------------------------------------- | ------------ | --------- |
+| 2025-09-11 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.06.bin | 1604bf9935   | important |
+
+### New
+
+1. Support RV1126BJ.
+2. Support pstore.
+
+### Fixed
+
+| Index | Severity  | Update             | Issue description                                            | Issue source |
+| ----- | --------- | ------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix refresh_margin | Some LPDDR4(X) may be unstable at specific frequency under high temperatures | 572300       |
+
+------
+
+## rv1126b_bl31_v1.10.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-09-05 | rv1126b_bl31_v1.10.elf | 33e45088f | important |
+
+### New
+
+1. Save and restore more registers when system suspend.
+
+------
+
+## rv1126b_bl31_v1.09.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-08-25 | rv1126b_bl31_v1.09.elf | 5b828b3a5 | important |
+
+### New
+
+1. Support to use external 32k clock during system suspend.
+
+------
+
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.05.bin
+
+| Date       | File                                     | Build commit | Severity |
+| ---------- | :--------------------------------------- | ------------ | -------- |
+| 2025-08-18 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.05.bin | c1d02225c7   | moderate |
+
+### Fixed
+
+| Index | Severity | Update                                  | Issue description             | Issue source |
+| ----- | -------- | --------------------------------------- | ----------------------------- | ------------ |
+| 1     | moderate | Optimize CA training PLL configuration  | Enhance CA training stability |              |
+| 2     | moderate | Optimize frequency information printing | -                             |              |
+
+------
+
+## rv1126b_bl32_v1.04.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | :--------------------- | ------------ | --------- |
+| 2025-08-15 | rv1126b_bl32_v1.04.bin | a89319de7    | important |
+
+### New
+
+1. OTP supports Non-Protected OEM Zone functionality.
+2. Support CMAC KDF derived algorithms.
+
+------
+
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.04.bin
+
+| Date       | File                                     | Build commit | Severity  |
+| ---------- | :--------------------------------------- | ------------ | --------- |
+| 2025-07-22 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.04.bin | ff328eecdd   | important |
+
+### Fixed
+
+| Index | Severity  | Update                                    | Issue description                              | Issue source |
+| ----- | --------- | ----------------------------------------- | ---------------------------------------------- | ------------ |
+| 1     | important | Fix​​ per-channel 3Gb/4Gb LPDDR4(X) tRFCpb  | Per-channel 3Gb/4Gb LPDDR4(X) sleep failures   |              |
+| 2     | important | Modify​​ CS training mode                   | Initialization issues on some LPDDR4(X) boards |              |
+| 3     | important | Optimize​​ DDR3/DDR4 SI settings            |                                                |              |
+| 4     | important | Enable​​ RV1126B LPDDR4 DBI to enhance SIPI |                                                |              |
+| 5     | moderate  | Optimize​​ LPDDR4(X) vref settings          |                                                |              |
+| 6     | moderate  | Add​​ PHY pll_ls configuration              |                                                |              |
+
+------
+
+## rv1126b_bl31_v1.08.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-07-17 | rv1126b_bl31_v1.08.elf | 2905dde0d | important |
+
+### New
+
+1. Always route fiq from s_el1  to el3.
+2. Improve accuracy of system timer after system suspend/resume for AOA.
+
+------
+
 ## rv1126b_bl31_v1.07.elf
 
 | Date       | File                  | Build commit | Severity  |
