@@ -1,5 +1,70 @@
 # RV1103B Release Note
 
+## rv1103b_tee_ta_v1.05.bin
+
+| Date       | File                     | Build commit | Severity  |
+| ---------- | :----------------------- | ------------ | --------- |
+| 2026-04-29 | rv1103b_tee_ta_v1.05.bin | 5f256dc1a    | important |
+
+### New
+
+1. OAEP decode compatible with MGF1 = SHA1.
+2. Optimize sleep and wake-up.
+
+### Fixed
+
+| Index | Severity  | Update                                   | Issue description                                            | Issue source |
+| ----- | --------- | ---------------------------------------- | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix the low-probability data abort issue | The reboot of the device during secure storage may trigger it with a low probability | -            |
+
+------
+
+## rv1103b_spl_v1.01.bin
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :----------------------- | ----------- | -------- |
+| 2026-03-02 | rv1103b_spl_v1.01.bin | a27a89c5fa1   | important     |
+
+### Fixed
+
+| Index | Severity  | Update                                  | Issue description                   | Issue source |
+| ----- | --------- | --------------------------------------- | ----------------------------------- | ------------ |
+| 1     | important  | Avoid premature decompression termination by decom. | SPL hw decompression of uboot failed. | -            |
+
+------
+
+## rv1103b_usbplug_auto_merge_v1.11.bin
+
+| Date       | File                               | Build commit                                   | Severity |
+| ---------- | :--------------------------------- | ---------------------------------------------- | -------- |
+| 2026-02-10 | rv1103b_usbplug_auto_merge_v1.11.bin | 3bb9568b5 | moderate |
+
+### New
+
+1. Enable SFDP.
+
+------
+
+## rv1103b_ddr_924MHz{_tb}_v1.06.bin
+
+| Date       | File                              | Build commit | Severity  |
+| ---------- | :-------------------------------- | ------------ | --------- |
+| 2025-10-10 | rv1103b_ddr_924MHz{_tb}_v1.06.bin | b971cce143   | important |
+
+### New
+
+1. Weak pull up UART0M0 RX to prevent it from being switched to JTAG.
+2. Add rzq calibration function.
+
+### Fixed
+
+| Index | Severity  | Update                               | Issue description                                            | Issue source |
+| ----- | --------- | ------------------------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fixing DDR initialization hang issue | Board with high PLL power supply ripple exhibits intermittent boot hang | -            |
+| 2     | important | Fixing gate training abnormal issue  | Intermittent training result anomaly with boot failure       | -            |
+
+------
+
 ## rv1103b_usbplug_spinand_cont_v1.10.bin
 
 | Date       | File                     | Build commit | Severity  |

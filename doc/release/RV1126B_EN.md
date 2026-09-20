@@ -1,5 +1,81 @@
 # rv1126b Release Note
 
+## rv1126b_bl32_v1.06.bin
+
+| Date       | File                   | Build Commit | Severity  |
+| ---------- | ---------------------- | ------------ | --------- |
+| 2026-04-29 | rv1126b_bl32_v1.06.bin | 5f256dc1a    | important |
+
+### Fixed
+
+| Index | Severity  | Update                                   | Issue description                                            | Issue source |
+| ----- | --------- | ---------------------------------------- | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix the low-probability data abort issue | The reboot of the device during secure storage may trigger it with a low probability | -            |
+
+------
+
+## rv1126b_bl32_v1.05.bin
+
+| Date       | File                   | Build Commit | Severity |
+| ---------- | ---------------------- | ------------ | -------- |
+| 2026-03-10 | rv1126b_bl32_v1.05.bin | 14421695d    | important |
+
+### New
+
+1. Support CTR mode.
+2. OAEP decode compatible with MGF1 = SHA1.
+3. Support DICE data read/write.
+
+### Fixed
+
+| Index | Severity | Update                 | Issue description                 | Issue source |
+| ----- | -------- | ---------------------------------- | ---------------------------------------- | -------- |
+| 1     | important | Enable CE instruction set by default | Algorithm runs slow without CE support | 614919 |
+
+------
+
+## rv1126b_spl{, _ipc}_v1.06.bin
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :----------------------- | ----------- | -------- |
+| 2026-03-02 | rv1126b_spl{, _ipc}_v1.06.bin | a27a89c5fa1   | important     |
+
+### Fixed
+
+| Index | Severity  | Update                                  | Issue description                   | Issue source |
+| ----- | --------- | --------------------------------------- | ----------------------------------- | ------------ |
+| 1     | important  | Avoid premature decompression termination by decom. | SPL hw decompression of uboot failed. | -            |
+
+------
+
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.10.bin
+
+| Date       | File                                     | Build commit | Severity |
+| ---------- | :--------------------------------------- | ------------ | -------- |
+| 2026-01-06 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.10.bin | 53750e2af0   | moderate |
+
+### New
+
+1. Support using the tool to change the RV1126BP frequency to a maximum of 1332MHz. Note: Please confirm that the hardware design can achieve the target frequency before making the change.
+
+2. Compatible with some UniIC and ISSI LPDDR4(X).
+
+3. Add rv1126b_ddr_Template_DDR3P216DD61346_32R5x25R0_2112Mbps_H1R6_V10_20251212_1056MHz_{tb_, eyescan_}v1.10.bin, only for supporting the template: RV1126B_Template_DDR3P216DD61346_32R5x25R0_2112Mbps_H1R6_V10_20251212.
+
+------
+
+## rv1126b_bl31_v1.13.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-12-10 | rv1126b_bl31_v1.13.elf | be86983f3 | important |
+
+### New
+
+1. Improve the frequency accuracy of RC OSC when system suspend.
+
+------
+
 ## rv1126b{p}_ddr_{1332, 1056}MHz_v1.09.bin
 
 | Date       | File                                     | Build commit | Severity |
@@ -16,13 +92,26 @@
 
 ## rv1126b{p}_ddr_{1332, 1056}MHz_v1.08.bin
 
-| 时间       | 文件                                     | 编译 commit | 重要程度 |
-| ---------- | :--------------------------------------- | ----------- | -------- |
-| 2025-11-25 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.08.bin | 1cbce6fa94  | 普通     |
+| Date       | File                                     | Build commit | Severity  |
+| ---------- | :--------------------------------------- | ------------ | --------- |
+| 2025-11-20 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.08.bin | 1cbce6fa94   | moderate |
 
 ### New
 
-1. 支持 RV1126BM。
+1. Support RV1126BM.
+
+------
+
+## rv1126b_bl31_v1.12.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-11-04 | rv1126b_bl31_v1.12.elf | ae491a342 | important |
+
+### New
+
+1. Support 16bit LPDDR4/LPDDR4X for system suspend.
+2. Optimize system resume time.
 
 ------
 

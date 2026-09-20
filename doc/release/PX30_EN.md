@@ -1,5 +1,55 @@
 # PX30 Release Note
 
+## px30_bl32_v2.21.bin
+
+| Date       | File                | Build Commit | Severity  |
+| ---------- | ------------------- | ------------ | --------- |
+| 2026-04-29 | px30_bl32_v2.21.bin | 5f256dc1a    | important |
+
+### Fixed
+
+| Index | Severity  | Update                                   | Issue description                                            | Issue source |
+| ----- | --------- | ---------------------------------------- | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix the low-probability data abort issue | The reboot of the device during secure storage may trigger it with a low probability | -            |
+
+------
+
+## px30_bl32_v2.20.bin
+
+| Date       | File                   | Build Commit | Severity |
+| ---------- | ---------------------- | ------------ | -------- |
+| 2026-03-10 | px30_bl32_v2.20.bin | 14421695d    | important |
+
+### New
+
+1. Support CTR mode.
+2. OAEP decode compatible with MGF1 = SHA1.
+3. Support DICE data read/write.
+5. Support kt_cipher_mac and rk_oem_otp_key_aead.
+5. Supports user TA cipher.
+6. Support rk_verify_config_ip.
+
+### Fixed
+
+| Index | Severity | Update                 | Issue description                 | Issue source |
+| ----- | -------- | ---------------------------------- | ---------------------------------------- | -------- |
+| 1     | important | Enable CE instruction set by default | Algorithm runs slow without CE support | 6343517  |
+| 2 | important | Issue of incomplete data in ta_ver.db caused by power failure | ldelf_init_with_ldelf:126 ldelf failed with res: 0xffff0007 | 613634 |
+
+------
+
+## px30_bl31_v1.35.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2026-02-12 | px30_bl31_v1.35.elf | afdac37e9 | important |
+
+### New
+
+1. Improve the stability of OTP.
+
+------
+
 ## px30_ddr_333MHz_v2.12.bin
 
 | Date       | file                      | Build commit | Severity  |
